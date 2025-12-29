@@ -1,10 +1,33 @@
+import { SearchIcon } from "lucide-react";
+import Header from "./_components/header";
 import { Button } from "./_components/ui/button";
+import { Input } from "./_components/ui/input";
+import Image from "next/image";
 
 export default function Home() {
   return (
     <div>
-      <h2>FSW Barber</h2>
-      <Button>Novo</Button>
+      <Header />
+      <div className="p-5">
+        <h2 className="text-xl font-bold">Olá, Rodrigo!</h2>
+        <p>Dom. 28 de dezembro.</p>
+
+        <div className="mt-6 flex items-center gap-2">
+          <Input placeholder="Faça sua busca" />
+          <Button>
+            <SearchIcon />
+          </Button>
+        </div>
+
+        <div className="relative mt-6 h-[150px] w-full">
+          <Image
+            src="/Banner01.svg"
+            fill
+            className="rounded-xl object-cover"
+            alt="Agende nos melhores com FSW Barber"
+          />
+        </div>
+      </div>
     </div>
   );
 }
