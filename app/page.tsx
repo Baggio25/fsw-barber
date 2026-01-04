@@ -9,7 +9,7 @@ import { db } from "./_lib/prisma";
 import BarberShopItem from "./_components/barbershop-item";
 import { quickSearchOptions } from "./_constants/search";
 import BookingItem from "./_components/booking-item";
-import Footer from "./_components/footer";
+
 import Sections from "./_components/sections";
 
 const Home = async () => {
@@ -75,8 +75,6 @@ const Home = async () => {
           ))}
         </Sections>
       </div>
-
-      <Footer />
     </div>
   );
 };

@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 
 import "./globals.css";
+import { Toaster } from "./_components/ui/sonner";
+import Footer from "./_components/footer";
 
 export const metadata: Metadata = {
   title: "FSW Barber",
@@ -14,7 +16,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
-      <body className={`antialiased`}>{children}</body>
+      <body className={`antialiased`}>
+        {children}
+        <Toaster />
+        <Footer />
+      </body>
     </html>
   );
 }
