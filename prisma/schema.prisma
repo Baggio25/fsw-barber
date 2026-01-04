@@ -14,19 +14,19 @@ model User {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
-  Booking Booking[]
+  bookingsp Booking[]
 }
 
 model Barbershop {
-  id                String              @id @default(uuid())
-  name              String
-  address           String
-  phones            String[]
-  description       String
-  imageUrl          String
-  createdAt         DateTime            @default(now())
-  updatedAt         DateTime            @updatedAt
-  BarbershopService BarbershopService[]
+  id          String              @id @default(uuid())
+  name        String
+  address     String
+  phones      String[]
+  description String
+  imageUrl    String
+  createdAt   DateTime            @default(now())
+  updatedAt   DateTime            @updatedAt
+  services    BarbershopService[]
 }
 
 model BarbershopService {
@@ -40,7 +40,7 @@ model BarbershopService {
   barberShopId String
   barbershop   Barbershop @relation(fields: [barberShopId], references: [id])
 
-  Booking Booking[]
+  bookings Booking[]
 }
 
 model Booking {
