@@ -25,7 +25,7 @@ const BarberShopPage = async ({ params }: BarberShopPageProps) => {
 
   return (
     <div>
-      <div className="relative h-[250px] w-full">
+      <div className="relative h-[250px] w-full lg:h-96">
         <Image
           src={barberShop?.imageUrl}
           alt={barberShop?.name}
@@ -74,7 +74,7 @@ const BarberShopPage = async ({ params }: BarberShopPageProps) => {
         <h2 className="mb-3 text-xs font-bold uppercase text-gray-400">
           SERVIÇOS
         </h2>
-        <div className="space-y-3">
+        <div className="grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3">
           {barberShop.services.map((service) => (
             <ServiceItem service={service} key={service.id} />
           ))}
